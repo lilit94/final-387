@@ -26,12 +26,12 @@ void setup()  {
     } 
   
   
-  Serial.print("Calibrating PIR Sensors ");
+  
     for(int c = 0; c < 15; c++){ 
       Serial.print(".");
       delay(1000); // wait 1 second
       } // end calibration for
-    Serial.println("PIR Sensors Ready");
+    
   
    
   } 
@@ -47,7 +47,7 @@ void loop()  {
     PIRstatus = digitalRead(currentPIRpin);
     
     if (PIRstatus == HIGH) { 
-      digitalWrite(currentLEDpin, HIGH); // turn corresponding LED on
+    
       if(PIRprevState[PIR] == 0) { 
         if (currentPIRposition != currentPIRpin && PIRprevState[PIR] == 0) { 
         
